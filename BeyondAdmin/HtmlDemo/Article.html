@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <!--Basic Styles-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/css/weather-icons.min.css" rel="stylesheet" />
+    <!--Fonts-->
+    <link href="../assets/css/usesocom-fonts.css" rel="stylesheet" type="text/css">
+    <link href="../Content/Styles/PagerStyle.css" rel="stylesheet" />
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../assets/css/beyond.min.css?v=2016072501" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/demo.min.css" rel="stylesheet" />
+    <link href="../assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="../assets/css/animate.min.css" rel="stylesheet" />
+    <link href="../UEditor/third-party/SyntaxHighlighter/shCoreDefault.css" rel="stylesheet" />
+    <script src="../UEditor/third-party/SyntaxHighlighter/shCore.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="../assets/js/skins.min.js"></script>
+    <title>Article</title>
+    <style>
+        mypre {
+            display: block;
+            font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+            padding: 9.5px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 20px;
+            word-break: break-all;
+            word-wrap: break-word;
+            background-color: #f5f5f5;
+            border: 1px solid #33998C;
+            border-radius: 4px;
+            color: #000;
+        }
+        
+        .title {
+            border-bottom: 1px solid #90bba8;
+        }
+        
+        ul {
+            margin-left: -37px;
+        }
+        
+        .listArticle {
+            border-bottom: solid 1px #eee;
+            padding: 8px 0px;
+            list-style: none;
+        }
+        
+        .titleColor {
+            color: #33998C;
+        }
+        
+        .titleOverFlow {
+            overflow: hidden;
+            -moz-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .authorColor {
+            color: #f78585;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 页面内容块 -->
+    <input type="hidden" id="hidRootNode" value="../" />
+    <!--Loading Container -->
+    <div class="loading-container">
+        <div class="loading-progress">
+            <div class="rotator">
+                <div class="rotator">
+                    <div class="rotator colored">
+                        <div class="rotator">
+                            <div class="rotator colored">
+                                <div class="rotator colored"></div>
+                                <div class="rotator"></div>
+                            </div>
+                            <div class="rotator colored"></div>
+                        </div>
+                        <div class="rotator"></div>
+                    </div>
+                    <div class="rotator"></div>
+                </div>
+                <div class="rotator"></div>
+            </div>
+            <div class="rotator"></div>
+        </div>
+    </div>
+    <!--/Loading Container -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="navbar-container">
+                <!-- Navbar Barnd -->
+                <div class="navbar-header pull-left">
+                    <a href="../Home/Home/WelCome" class="navbar-brand">
+                        <div>
+                            系统名称
+                        </div>
+                    </a>
+                </div>
+                <!-- /Navbar Barnd -->
+                <!-- Sidebar Collapse -->
+                <div class="sidebar-collapse" id="sidebar-collapse">
+                    <i class="collapse-icon fa fa-bars"></i>
+                </div>
+                <!-- /Sidebar Collapse -->
+                <!-- Account Area and Settings -->
+                <div class="navbar-header pull-right">
+                    <div class="navbar-account">
+                        <ul class="account-area">
+                            <li>
+                                <a class=" dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
+                                    <i class="icon fa fa-warning"></i>
+                                </a>
+                                <!--Notification Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-notifications">
+                                    <li class="dropdown-footer ">
+                                        <span>
+                                        ^v^没有任何警告哦
+                                    </span>
+                                    </li>
+                                </ul>
+                                <!--/Notification Dropdown-->
+                            </li>
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown" title="Tasks" href="#">
+                                    <i class="icon fa fa-tasks"></i>
+                                    <span class="badge"></span>
+                                </a>
+                                <!--Tasks Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-tasks dropdown-arrow taskdrawpdown">
+                                    <li class="dropdown-header bordered-darkorange">
+                                        <i class="fa fa-tasks"></i> Tasks In Progress
+                                    </li>
+                                </ul>
+                                <!--/Tasks Dropdown-->
+                            </li>
+                            <li>
+                                <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                                    <div class="avatar" title="View your public profile">
+                                        <img src="../content/images/myself.png">
+                                    </div>
+                                    <section>
+                                        <h2><span class="profile"><span>用户名称</span></span>
+                                        </h2>
+                                    </section>
+                                </a>
+                                <!--Login Area Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                    <li class="username"><a>用户名称</a></li>
+                                    <li class="email"><a>详细信息</a></li>
+                                    <!--Avatar Area-->
+                                    <li>
+                                        <div class="avatar-area">
+                                            <img src="../content/images/myself.png" class="avatar">
+                                            <span class="caption">修改头像</span>
+                                        </div>
+                                    </li>
+                                    <!--Theme Selector Area-->
+                                    <li class="theme-area">
+                                        <ul class="colorpicker" id="skin-changer">
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#5DB2FF;" rel="../assets/css/skins/blue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#2dc3e8;" rel="../assets/css/skins/azure.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#03B3B2;" rel="../assets/css/skins/teal.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#53a93f;" rel="../assets/css/skins/green.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#FF8F32;" rel="../assets/css/skins/orange.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#cc324b;" rel="../assets/css/skins/pink.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#AC193D;" rel="../assets/css/skins/darkred.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#8C0095;" rel="../assets/css/skins/purple.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#0072C6;" rel="../assets/css/skins/darkblue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#585858;" rel="../assets/css/skins/gray.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#474544;" rel="../assets/css/skins/black.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#001940;" rel="../assets/css/skins/deepblue.min.css"></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!--/Theme Selector Area-->
+                                    <li class="dropdown-footer">
+                                        <a href="../Account/Auth/Logout">
+                                        退出登录
+                                    </a>
+                                    </li>
+                                </ul>
+                                <!--/Login Area Dropdown-->
+                            </li>
+                            <!-- /Account Area -->
+                            <!--Note: notice that setting div must start right after account area list.
+                        no space must be between these elements-->
+                            <!-- Settings -->
+                        </ul>
+                        <div class="setting">
+                            <a id="btn-setting" title="Setting" href="#">
+                                <i class="icon glyphicon glyphicon-cog"></i>
+                            </a>
+                        </div>
+                        <div class="setting-container">
+                            <label>
+                            <input type="checkbox" id="checkbox_fixednavbar">
+                            <span class="text">固定头部</span>
+                        </label>
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedsidebar">
+                            <span class="text">固定菜单栏</span>
+                        </label>
+
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedheader">
+                            <span class="text">固定内容头部</span>
+                        </label>
+                        </div>
+                        <!-- Settings -->
+                    </div>
+                </div>
+                <!-- /Account Area and Settings -->
+            </div>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input type="text" class="searchinput" />
+                    <i class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+
+                <ul class="nav sidebar-menu">
+                    <li class="open">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-file"></i>
+                            <span class="menu-text">缓存管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/Redis" title="Redis缓存">
+                                    <span class="menu-text">Redis缓存</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/LeonidClear" title="狮子座缓存">
+                                    <span class="menu-text">狮子座缓存</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/csearchlight/Cache/Cache/DealNewRedis" title="NewRedis缓存">
+                                    <span class="menu-text">NewRedis缓存</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <i class="menu-icon glyphicon  glyphicon-home"></i>
+                        <h1>
+                            这是是定位
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <div class="widget widget-body">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                <h1 class="pd-20 titleColor">@Model.TSTTitle</h1>
+                                <article class="pd-20">
+                                    <p class="authorColor"><small><em>2017-01-09 &nbsp;&nbsp;作者</em></small></p>
+                                    <mypre>
+                                        <table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  c#">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <div class="line number1 index0 alt2">1</div>
+                                                        <div class="line number2 index1 alt1">2</div>
+                                                        <div class="line number3 index2 alt2">3</div>
+                                                        <div class="line number4 index3 alt1">4</div>
+                                                        <div class="line number5 index4 alt2">5</div>
+                                                        <div class="line number6 index5 alt1">6</div>
+                                                        <div class="line number7 index6 alt2">7</div>
+                                                        <div class="line number8 index7 alt1">8</div>
+                                                        <div class="line number9 index8 alt2">9</div>
+                                                        <div class="line number10 index9 alt1">10</div>
+                                                        <div class="line number11 index10 alt2">11</div>
+                                                        <div class="line number12 index11 alt1">12</div>
+                                                        <div class="line number13 index12 alt2">13</div>
+                                                        <div class="line number14 index13 alt1">14</div>
+                                                        <div class="line number15 index14 alt2">15</div>
+                                                        <div class="line number16 index15 alt1">16</div>
+                                                        <div class="line number17 index16 alt2">17</div>
+                                                        <div class="line number18 index17 alt1">18</div>
+                                                        <div class="line number19 index18 alt2">19</div>
+                                                        <div class="line number20 index19 alt1">20</div>
+                                                        <div class="line number21 index20 alt2">21</div>
+                                                        <div class="line number22 index21 alt1">22</div>
+                                                        <div class="line number23 index22 alt2">23</div>
+                                                        <div class="line number24 index23 alt1">24</div>
+                                                        <div class="line number25 index24 alt2">25</div>
+                                                        <div class="line number26 index25 alt1">26</div>
+                                                        <div class="line number27 index26 alt2">27</div>
+                                                        <div class="line number28 index27 alt1">28</div>
+                                                        <div class="line number29 index28 alt2">29</div>
+                                                        <div class="line number30 index29 alt1">30</div>
+                                                        <div class="line number31 index30 alt2">31</div>
+                                                        <div class="line number32 index31 alt1">32</div>
+                                                        <div class="line number33 index32 alt2">33</div>
+                                                        <div class="line number34 index33 alt1">34</div>
+                                                    </td>
+                                                    <td class="code">
+                                                        <div class="container">
+                                                            <div class="line number1 index0 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# color1">///&nbsp;&lt;summary&gt;</code></div>
+                                                            <div class="line number2 index1 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# color1">///&nbsp;PC搜索页同步筛选条件</code></div>
+                                                            <div class="line number3 index2 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# color1">///&nbsp;&lt;/summary&gt;</code></div>
+                                                            <div class="line number4 index3 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# color1">///&nbsp;&lt;description&gt;allParams表示地址中的参数-0-1-0-0-0-1-1或者s1g2c3r4t5m210611d8，</code></div>
+                                                            <div class="line number5 index4 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">其中以-开头的参数需要写死-开头，顺序必须按照指定顺序使用。</code></div>
+                                                            <div class="line number6 index5 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">第二种参数s1g2c3r4t5m210611d8按需传递，需要什么参数传入什么参数，顺序可变换&lt;/description&gt;</code></div>
+                                                            <div class="line number7 index6 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# color1">///&nbsp;&lt;author&gt;FreshMan&lt;/author&gt;</code></div>
+                                                            <div class="line number8 index7 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# color1">///&nbsp;&lt;createtime&gt;2016-11-09&lt;/createtime&gt;</code></div>
+                                                            <div class="line number9 index8 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# color1">///&nbsp;&lt;returns&gt;搜索接口返回原始数据&lt;/returns&gt;</code></div>
+                                                            <div class="line number10 index9 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">public</code>&nbsp;<code class="c# plain">ApiResultEntity&lt;AbsResponseCruiseSearchModel&gt;&nbsp;GetSearchConditionInfo()</code></div>
+                                                            <div class="line number11 index10 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">{</code></div>
+                                                            <div class="line number12 index11 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">//获取参数</code></div>
+                                                            <div class="line number13 index12 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">strParam&nbsp;=&nbsp;WebRequestHelper.GetStringFromParameters(</code>
+                                                                <code class="c# string">"allParams"</code><code class="c# plain">);</code></div>
+                                                            <div class="line number14 index13 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">platform&nbsp;=&nbsp;WebRequestHelper.GetIntFromParameters(</code>
+                                                                <code class="c# string">"platform"</code><code class="c# plain">);</code></div>
+                                                            <div class="line number15 index14 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">dest&nbsp;=&nbsp;HttpUtility.UrlDecode(WebRequestHelper.GetStringFromParameters(</code>
+                                                                <code class="c# string">"dest"</code><code class="c# plain">));</code></div>
+                                                            <div class="line number16 index15 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">lcCityId&nbsp;=&nbsp;WebRequestHelper.GetIntFromParameters(</code>
+                                                                <code class="c# string">"lc"</code><code class="c# plain">);</code></div>
+                                                            <div class="line number17 index16 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">ipAddress&nbsp;=&nbsp;WebRequestHelper.GetStringFromParameters(</code>
+                                                                <code class="c# string">"ipAddress"</code><code class="c# plain">);</code></div>
+                                                            <div class="line number18 index17 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">platformEnum&nbsp;=&nbsp;EnumHelper.GetEnumByValue&lt;SiteTypeEnum&gt;(platform);</code></div>
+                                                            <div class="line number19 index18 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">//选择使用平台上下文服务</code></div>
+                                                            <div class="line number20 index19 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">ICruiseSearchContextServer&nbsp;platformContext&nbsp;=&nbsp;CruiseSearchContextFactory.GetSearchContextFatory(platformEnum);</code></div>
+                                                            <div class="line number21 index20 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">//确定使用何种接口获取数据</code></div>
+                                                            <div class="line number22 index21 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">platformContext.SearchDataServer&nbsp;=&nbsp;CruiseSearchDalServer.GetSearchDataServer(SearchInterfaceEnum.Dsf);</code></div>
+                                                            <div class="line number23 index22 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">//确定使用何种装饰</code></div>
+                                                            <div class="line number24 index23 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">platformContext.CruiseSearchDecorateServer&nbsp;=&nbsp;</code>
+                                                                <code class="c# keyword">new</code>&nbsp;
+                                                                <code class="c# plain">CruiseSearchDecorateSearchConditionServer();</code>
+                                                            </div>
+                                                            <div class="line number25 index24 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">//参数解析</code></div>
+                                                            <div class="line number26 index25 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">searchParam&nbsp;=&nbsp;CruiseSearchParamServerBll.AnalysisSearchParams(strParam);</code></div>
+                                                            <div class="line number27 index26 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">if</code>&nbsp;<code class="c# plain">(searchParam&nbsp;!=&nbsp;</code>
+                                                                <code class="c# keyword">null</code>&nbsp;
+                                                                <code class="c# plain">&amp;&amp;&nbsp;searchParam.LcCityId&nbsp;&lt;&nbsp;1)&nbsp;searchParam.LcCityId&nbsp;=&nbsp;lcCityId;</code>
+                                                            </div>
+                                                            <div class="line number28 index27 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">//调取自定义请求参数类型转换方法</code></div>
+                                                            <div class="line number29 index28 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">searchModel&nbsp;=&nbsp;</code>
+                                                                <code class="c# keyword">new</code>&nbsp;
+                                                                <code class="c# plain">TurenSearchParamsToAbsSearchModelServer()</code>
+                                                            </div>
+                                                            <div class="line number30 index29 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">.DefaultTurnSearchParamsToAbsSearchModel(searchParam,&nbsp;dest,&nbsp;ipAddress,&nbsp;1);</code></div>
+                                                            <div class="line number31 index30 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">var</code>&nbsp;<code class="c# plain">searchLineInfoList&nbsp;=</code></div>
+                                                            <div class="line number32 index31 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">new</code>&nbsp;<code class="c# plain">CruiseSearchContextLineServerBll(platformContext).GetCruiseSearchContextInfo(searchModel,&nbsp;</code>
+                                                                <code class="c# keyword">null</code><code class="c# plain">);</code></div>
+                                                            <div class="line number33 index32 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">return</code>&nbsp;<code class="c# plain">HandleSuccessResult(searchLineInfoList);</code></div>
+                                                            <div class="line number34 index33 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">}</code></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </mypre>
+                                </article>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <div class="widget">
+                                    <div class="pd-40 title titleColor">
+                                        <h2>最近分享</h2>
+                                    </div>
+                                    <ul>
+                                        <li class="listArticle">
+                                            <a class="titleOverFlow" href="@(ViewBag.RootNode)/MoreingShare/MoreingShareDetail/?id=@moreingShareModel.id" title="@moreingShareModel.TSTTitle">@moreingShareModel.TSTTitle</a>
+                                        </li>
+                                        <li class="listArticle">
+                                            <a class="titleOverFlow" href="@(ViewBag.RootNode)/MoreingShare/MoreingShareDetail/?id=@moreingShareModel.id" title="@moreingShareModel.TSTTitle">@moreingShareModel.TSTTitle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+        <!-- /Page Container -->
+        <!-- Main Container -->
+
+    </div>
+    <!--Basic Scripts-->
+    <script src="../assets/js/jquery-2.0.3.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!--Beyond Scripts-->
+    <script src="../assets/js/beyond.min.js"></script>
+    <!--页面脚本位置S-->
+
+    <!--页面脚本位置E-->
+
+</body>
+
+</html>

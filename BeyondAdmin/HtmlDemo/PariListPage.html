@@ -1,0 +1,53 @@
+<table class="table table-border table-bordered table-bg table-hover table-sort">
+    <thead class="flip-content bordered-palegreen">
+        <tr class="control-center">
+            <th>ID</th>
+            <th>会员ID</th>
+            <th>会员名称</th>
+            <th>会员手机号</th>
+            <th>抽奖结果描述</th>
+            <th>抽奖时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="control-center">
+            <td>@showId</td>
+            <td>@activitDetail.MemberId</td>
+            <td>@activitDetail.UserName</td>
+            <td>@activitDetail.Mobile</td>
+            <td>@activitDetail.Remark</td>
+            <td>@activitDetail.CreatTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+        </tr>
+    </tbody>
+</table>
+<table width="100%">
+    <tr>
+        <td>
+            <div id="pager">
+            </div>
+        </td>
+    </tr>
+</table>
+<input type="hidden" id="currentPageIndex" value="@(ViewBag.Current)" />
+<script type="text/javascript">
+    //$('.table-sort').dataTable({
+    //    "lengthMenu": false,//显示数量选择
+    //    "bFilter": false,//过滤功能
+    //    "bPaginate": false,//翻页信息
+    //    "bInfo": false,//数量信息
+    //    "aaSorting": [[0, "asc"]],//默认第几个排序
+    //    "bStateSave": true,//状态保存
+    //    "aoColumnDefs": [
+    //      //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+    //      //{ "orderable": false, "aTargets": [0, 8] }// 制定列不参与排序
+    //    ]
+    //});
+    $(function() {
+        var pager = new PagerView('pager');
+        pager.itemCount = '@(ViewBag.CountPage)';
+        pager.index = '@(ViewBag.Current)';
+        pager.size = '@(ViewBag.Size)';
+        pager.methodName = "Search";
+        pager.render();
+    });
+</script>

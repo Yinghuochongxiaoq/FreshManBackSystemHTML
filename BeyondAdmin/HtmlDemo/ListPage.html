@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面样式表 -->
+    <meta charset="utf-8" />
+    <title>ListPage</title>
+    <meta name="description" content="Dashboard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <!--Basic Styles-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/css/weather-icons.min.css" rel="stylesheet" />
+    <!--Fonts-->
+    <link href="../assets/css/usesocom-fonts.css" rel="stylesheet" type="text/css">
+    <link href="../Content/Styles/PagerStyle.css" rel="stylesheet" />
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../assets/css/beyond.min.css?v=2016072501" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/demo.min.css" rel="stylesheet" />
+    <link href="../assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="../assets/css/animate.min.css" rel="stylesheet" />
+    <!--页面样式-->
+    <link href="../assets/css/pageStyle.css" rel="stylesheet" />
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="../assets/js/skins.min.js"></script>
+</head>
+
+<body>
+    <!-- 页面内容块 -->
+    <input type="hidden" id="hidRootNode" value="../" />
+    <!-- Loading Container -->
+    <div class="loading-container">
+        <div class="loading-progress">
+            <div class="rotator">
+                <div class="rotator">
+                    <div class="rotator colored">
+                        <div class="rotator">
+                            <div class="rotator colored">
+                                <div class="rotator colored"></div>
+                                <div class="rotator"></div>
+                            </div>
+                            <div class="rotator colored"></div>
+                        </div>
+                        <div class="rotator"></div>
+                    </div>
+                    <div class="rotator"></div>
+                </div>
+                <div class="rotator"></div>
+            </div>
+            <div class="rotator"></div>
+        </div>
+    </div>
+    <!--  /Loading Container -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="navbar-container">
+                <!-- Navbar Barnd -->
+                <div class="navbar-header pull-left">
+                    <a href="../Home/Home/WelCome" class="navbar-brand">
+                        <div>
+
+
+                            系统名称
+                        </div>
+                    </a>
+                </div>
+                <!-- /Navbar Barnd -->
+                <!-- Sidebar Collapse -->
+                <div class="sidebar-collapse" id="sidebar-collapse">
+                    <i class="collapse-icon fa fa-bars"></i>
+                </div>
+                <!-- /Sidebar Collapse -->
+                <!-- Account Area and Settings -->
+                <div class="navbar-header pull-right">
+                    <div class="navbar-account">
+                        <ul class="account-area">
+                            <li>
+                                <a class=" dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
+                                    <i class="icon fa fa-warning"></i>
+                                </a>
+                                <!--Notification Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-notifications">
+                                    <li class="dropdown-footer ">
+                                        <span>
+                                        ^v^没有任何警告哦
+                                    </span>
+                                    </li>
+                                </ul>
+                                <!--/Notification Dropdown-->
+                            </li>
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown" title="Tasks" href="#">
+                                    <i class="icon fa fa-tasks"></i>
+                                    <span class="badge"></span>
+                                </a>
+                                <!--Tasks Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-tasks dropdown-arrow taskdrawpdown">
+                                    <li class="dropdown-header bordered-darkorange">
+                                        <i class="fa fa-tasks"></i> Tasks In Progress
+                                    </li>
+                                </ul>
+                                <!--/Tasks Dropdown-->
+                            </li>
+                            <li>
+                                <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                                    <div class="avatar" title="View your public profile">
+                                        <img src="../content/images/myself.png">
+                                    </div>
+                                    <section>
+                                        <h2><span class="profile"><span>用户名称</span></span>
+                                        </h2>
+                                    </section>
+                                </a>
+                                <!--Login Area Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                    <li class="username"><a>用户名称</a></li>
+                                    <li class="email"><a>详细信息</a></li>
+                                    <!--Avatar Area-->
+                                    <li>
+                                        <div class="avatar-area">
+                                            <img src="../content/images/myself.png" class="avatar">
+                                            <span class="caption">修改头像</span>
+                                        </div>
+                                    </li>
+                                    <!--Theme Selector Area-->
+                                    <li class="theme-area">
+                                        <ul class="colorpicker" id="skin-changer">
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#5DB2FF;" rel="../assets/css/skins/blue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#2dc3e8;" rel="../assets/css/skins/azure.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#03B3B2;" rel="../assets/css/skins/teal.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#53a93f;" rel="../assets/css/skins/green.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#FF8F32;" rel="../assets/css/skins/orange.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#cc324b;" rel="../assets/css/skins/pink.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#AC193D;" rel="../assets/css/skins/darkred.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#8C0095;" rel="../assets/css/skins/purple.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#0072C6;" rel="../assets/css/skins/darkblue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#585858;" rel="../assets/css/skins/gray.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#474544;" rel="../assets/css/skins/black.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#001940;" rel="../assets/css/skins/deepblue.min.css"></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!--/Theme Selector Area-->
+                                    <li class="dropdown-footer">
+                                        <a href="../Account/Auth/Logout">
+                                        退出登录
+                                    </a>
+                                    </li>
+                                </ul>
+                                <!--/Login Area Dropdown-->
+                            </li>
+                            <!-- /Account Area -->
+                            <!--Note: notice that setting div must start right after account area list.
+                        no space must be between these elements-->
+                            <!-- Settings -->
+                        </ul>
+                        <div class="setting">
+                            <a id="btn-setting" title="Setting" href="#">
+                                <i class="icon glyphicon glyphicon-cog"></i>
+                            </a>
+                        </div>
+                        <div class="setting-container">
+                            <label>
+                            <input type="checkbox" id="checkbox_fixednavbar">
+                            <span class="text">固定头部</span>
+                        </label>
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedsidebar">
+                            <span class="text">固定菜单栏</span>
+                        </label>
+
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedheader">
+                            <span class="text">固定内容头部</span>
+                        </label>
+                        </div>
+                        <!-- Settings -->
+                    </div>
+                </div>
+                <!-- /Account Area and Settings -->
+            </div>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input type="text" class="searchinput" />
+                    <i class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+
+                <ul class="nav sidebar-menu">
+                    <li class="open">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-file"></i>
+                            <span class="menu-text">缓存管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/Redis" title="Redis缓存">
+                                    <span class="menu-text">Redis缓存</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/LeonidClear" title="狮子座缓存">
+                                    <span class="menu-text">狮子座缓存</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/csearchlight/Cache/Cache/DealNewRedis" title="NewRedis缓存">
+                                    <span class="menu-text">NewRedis缓存</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-exclamation-sign"></i>
+                            <span class="menu-text">订单管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Order/Order/OrderList/" title="订单列表">
+                                    <span class="menu-text">订单列表</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Order/Order/OrderDetail" title="订单详情">
+                                    <span class="menu-text">订单详情</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Order/Order/OrderDianPing" title="订单点评">
+                                    <span class="menu-text">订单点评</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Order/Order/MemberShipInfo" title="查询会员信息">
+                                    <span class="menu-text">查询会员信息</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-send"></i>
+                            <span class="menu-text">活动管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Activity/Activity/ActivityResult/" title="活动抽奖结果信息">
+                                    <span class="menu-text">活动抽奖结果信息</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-paperclip"></i>
+                            <span class="menu-text">工具管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/SecretTool/" title="加解密工具">
+                                    <span class="menu-text">加解密工具</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/JsonFormat/" title="Json格式化">
+                                    <span class="menu-text">Json格式化</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/QtImageDeal/" title="二维码解析">
+                                    <span class="menu-text">二维码解析</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/GetCityInfoByIp" title="IP定位城市">
+                                    <span class="menu-text">IP定位城市</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/UsuallyLinkAddress/" title="常用地址">
+                                    <span class="menu-text">常用地址</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-globe"></i>
+                            <span class="menu-text">前端管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/MaterialLibrary/index.html" title="前端一期特效">
+                                    <span class="menu-text">前端一期特效</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/SecedeSpecialEfficiency/index.html" title="前端二期特效">
+                                    <span class="menu-text">前端二期特效</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-folder-open"></i>
+                            <span class="menu-text">文档管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/FileManage/FileManage/FileManageIndex" title="文档管理集合页">
+                                    <span class="menu-text">文档管理集合页</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/FileManage/FileManage/FileUpload" title="上传资源文件">
+                                    <span class="menu-text">上传资源文件</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-home"></i>
+                            <span class="menu-text">营销组之家</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/FrontFamily/FrontFamily/FrontFamilyIndex/" title="我们的团队">
+                                    <span class="menu-text">我们的团队</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/FrontFamily/FrontFamily/FrontSayYouWant/" title="心愿树">
+                                    <span class="menu-text">心愿树</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-stats"></i>
+                            <span class="menu-text">用户轨迹查询</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/SpecialStatistic/SpecialStatistic/SpecialStatisticIndex/" title="轨迹简单查询">
+                                    <span class="menu-text">轨迹简单查询</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/SpecialStatistic/SpecialStatistic/OrderFinalInfoIndex/" title="入口订单量查询">
+                                    <span class="menu-text">入口订单量查询</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/SpecialStatistic/SpecialStatistic/TimeSliceSpecial/" title="专题访问时段">
+                                    <span class="menu-text">专题访问时段</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-share"></i>
+                            <span class="menu-text">晨会知识分享</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingShareInfoList" title="晨会分享列表">
+                                    <span class="menu-text">晨会分享列表</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingShareAddInfo" title="添加分享记录">
+                                    <span class="menu-text">添加分享记录</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingShareComment" title="分享点评">
+                                    <span class="menu-text">分享点评</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingSharePersonList" title="个人分享列表">
+                                    <span class="menu-text">个人分享列表</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingShareConfig" title="分享考核配置页">
+                                    <span class="menu-text">分享考核配置页</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <i class="menu-icon glyphicon  glyphicon-home"></i>
+                        <h1>
+                            这是是定位
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <div class="widget widget-body">
+                        <div class="panel panel-default">
+                            <form class="panel-body" action="" id="form1">
+                                <div class="form-inline control-left">
+                                    <label>
+                    分享月份 ：
+                    <select class="form-control input-sm" style="width: 120px" onchange="SetCheckWayID('#month', this);">
+                        <option value="1900-01-01" selected="selected">不限</option>
+                                <option value="2016-03-01">201603</option>
+                                <option value="2016-04-01">201604</option>
+                                <option value="2016-05-01">201605</option>
+                                <option value="2016-06-01">201606</option>
+                                <option value="2016-07-01">201607</option>
+                                <option value="2016-08-01">201608</option>
+                                <option value="2016-09-01">201609</option>
+                                <option value="2016-10-01">201610</option>
+                                <option value="2016-11-01">201611</option>
+                                <option value="2016-12-01">201612</option>
+                                <option value="2017-01-01">201701</option>
+                                <option value="2017-02-01">201702</option>
+                    </select>
+                </label>
+                                    <label>
+                    组织：
+                    <select class="form-control input-sm" style="width: 120px" onchange="SetCheckWayID('#teamId', this);">
+                        <option value="1900-01-01" selected="selected">不限</option>
+                                <option value="2">资源组</option>
+                                <option value="3">客服组</option>
+                                <option value="4">营销组</option>
+                                <option value="6">质量保障组</option>
+                                <option value="15">需求分析组</option>
+                                <option value="25">财务组</option>
+                    </select>
+                </label>
+                                    <label>
+                    大名：
+                    <input type="text" name="shareUserName" id="shareUserName" placeholder="姓名" class="form-control input-sm" style="min-width: 150px; width: 155px;">
+                </label>
+
+                                    <label>
+                    关键词：
+                    <input type="text" name="shareTheme" id="shareTheme" placeholder="主题关键字" class="form-control input-sm" style="min-width: 150px; width: 165px;">
+                </label>
+                                    <label>
+                    是否有效：
+                    <select class="form-control input-sm" style="width: 75px" onchange="SetCheckWayID('#isValid', this);">
+                        <option value="-1">不限</option>
+                        <option value="1" selected="selected">有效</option>
+                        <option value="0">无效</option>
+                    </select>
+                </label>
+                                    <label>
+                    
+        日期范围：
+        <input type="text" onfocus="WdatePicker({ maxDate: '#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}', dateFmt: 'yyyy-MM-dd HH:mm:ss' })" id="logmin" class="form-control Wdate input-sm" style="width: 165px;" name="startDateTime">
+         至
+         <input type="text" onfocus="WdatePicker({ minDate: '#F{$dp.$D(\'logmin\')}', maxDate: '%y-%M-%d', dateFmt: 'yyyy-MM-dd HH:mm:ss' })" id="logmax" class="form-control Wdate input-sm" style="width: 165px;" name="endDateTime">
+                </label>
+                                    <input type="button" onclick="LoadingActivityResultDetailDate(true);" class="btn btn-sm btn-success" title="查询" value="查询">
+                                </div>
+                                <input type="hidden" name="month" id="month" value="1900-01-01">
+                                <input type="hidden" name="isValid" id="isValid" value="1">
+                                <input type="hidden" name="workType" id="workType" value="-1">
+                                <input type="hidden" name="teamId" id="teamId" value="0">
+                            </form>
+                        </div>
+                        <div id="resultTable">
+                            <table class="table table-bordered  table-hover ">
+                                <thead class="flip-content bordered-palegreen">
+                                    <tr class="control-center">
+                                        <th>分享月份</th>
+                                        <th>姓名</th>
+                                        <th>分享主题</th>
+                                        <th>资料地址</th>
+                                        <th>拉票宣言</th>
+                                        <th style="min-width: 121px;">寡人预评</th>
+                                        <th>预评成绩</th>
+                                        <th>分享成效</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>卞开强</td>
+                                        <td title="仔细倾听,你会发现世界如此美好">仔细倾听,你会发现世界如此美好</td>
+                                        <td>
+                                            <span>--</span>
+
+                                        </td>
+                                        <td title="仔细倾听,你会发现世界如此美好">仔细倾听,你会发现世界如此美好</td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>0</td>
+                                        <td>9.333</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=316" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>孙李静</td>
+                                        <td title="高效能程序员的修炼">高效能程序员的修炼</td>
+                                        <td>
+                                            <span>--</span>
+
+                                        </td>
+                                        <td title="人生贵知心，定交无暮早。">人生贵知心，定交无暮早。</td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>0</td>
+                                        <td>9.643</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=315" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>夏骕</td>
+                                        <td title="软件能分享-需求分析">软件能分享-需求分析</td>
+                                        <td>
+                                            <span>--</span>
+
+                                        </td>
+                                        <td title=""></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>0</td>
+                                        <td>9.333</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=314" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>刘家驰</td>
+                                        <td title="提升自我价值">提升自我价值</td>
+                                        <td>
+                                            <span>--</span>
+
+                                        </td>
+                                        <td title=""></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>0</td>
+                                        <td>8.917</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=313" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>王莉</td>
+                                        <td title="为什么忙碌却让我们更贫穷--稀缺">为什么忙碌却让我们更贫穷--稀缺</td>
+                                        <td>
+                                            <span>--</span>
+
+                                        </td>
+                                        <td title=""></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>0</td>
+                                        <td>9.125</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=312" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>赵丹</td>
+                                        <td title="软技能分享-《跟谁一起工作，到底有多重要？》">软技能分享-《跟谁一起工作，到底有多重要...</td>
+                                        <td>
+                                            <span>--</span>
+
+                                        </td>
+                                        <td title="2016年最后一个工作日晨会分享的偶~~~~">2016年最后一个工作日晨会分享的偶~~...</td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>0</td>
+                                        <td>9.417</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=311" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>蔡延峰</td>
+                                        <td title="Emotional Intelligency Quotient">Emotional Intelligen...</td>
+                                        <td>
+                                            <span><a href="见附件" target="_blank">查看</a></span>
+
+                                        </td>
+                                        <td title="你们开心就好">你们开心就好</td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>0</td>
+                                        <td>9.214</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=310" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>李荣海</td>
+                                        <td title="在工作中提升自己">在工作中提升自己</td>
+                                        <td>
+                                            <span>--</span>
+
+                                        </td>
+                                        <td title=""></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>0</td>
+                                        <td>8.833</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=309" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>丛磊</td>
+                                        <td title="turbomq Java使用">turbomq Java使用</td>
+                                        <td>
+                                            <span><a href="http://bps.17usoft.com/pages/viewpage.action?pageId=8358077" target="_blank">查看</a></span>
+
+                                        </td>
+                                        <td title=""></td>
+                                        <td>
+                                        </td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=307" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="control-center">
+                                        <td>12 月</td>
+                                        <td>李锋</td>
+                                        <td title="工作任务如何分解">工作任务如何分解</td>
+                                        <td>
+                                            <span>--</span>
+
+                                        </td>
+                                        <td title=""></td>
+                                        <td>
+                                        </td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>
+                                            <a href="/youlun/TinyWork/MoreingShare/MoreingShareDetail?id=306" target="_blank">查看</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div id="pager">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--当前页码-->
+                            <input type="hidden" id="currentPageIndex" value="2">
+                        </div>
+                        <div class="mt-20">
+                            <div style="color:red;">评分规则说明：</div>
+                            <div>
+
+                                预评分为1-10分范围内的整数，或者你是用下面的评分规则。 （1） 每位同事按照工种在月底给其他同事的晨会分享进行评分。<br> （2） 8个开发 每位同事评分指标 1A 2B 3C 1D 6个前端 每位同事评分指标 1A 2B 1C 1D<br> （3） 等级对应分数A（10），B（9.5），C（9），D（8.5）<br> （4） 每位同事的评分结果为“所有获得的ABCD相加/对应工种人数”。如果同事一个月分享两次，会有0.8%的附加系数。<br>                                计算举例：某位开发同事获得的评分等级分别为 A B A B C D = 56.5。那么他的评分得数为56.5/6=9.417 （精确到小数点后3位，四舍五入） 如果分享了两次，那么他的分数为 9.417 + 9.417 * 0.8% = 9.417 + 0.075 =9.492
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+        <!-- /Page Container -->
+        <!-- Main Container -->
+
+    </div>
+    <!--Basic Scripts-->
+    <script src="../assets/js/jquery-2.0.3.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!--Beyond Scripts-->
+    <script src="../assets/js/beyond.min.js"></script>
+    <!--页面脚本位置S-->
+    <script src="../Content/Scripts/Common.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../Content/Scripts/PagerView.js"></script>
+    <script src="../Content/Scripts/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var pager = new PagerView('pager');
+            pager.itemCount = '253';
+            pager.index = '2';
+            pager.size = '10';
+            pager.methodName = "Search"; //分页方法名
+            pager.render();
+        });
+
+
+        /**
+         * 获得详细抽奖数据
+         * @param {} fui 
+         * @param {} obj 
+         * @returns {} 
+         */
+        function LoadingActivityResultDetailDate() {
+            var dataArry = {};
+            dataArry.activityId = $("#ActivityId").val();
+            if (dataArry.activityId <= 0) {
+                layer.msg('请选择活动内容', {
+                    time: 3000,
+                    icon: 5
+                });
+                return;
+            }
+            dataArry.ActivityArea = $("#ActivityArea").val();
+            dataArry.startDateTime = $(".startDateTime").val();
+            dataArry.endDateTime = $(".endDateTime").val();
+            dataArry.isShare = $("#ishasShare").val();
+            dataArry.currentPageIndex = $("#currentPageIndex").val();
+            var selectProduct = $("#resultTable");
+            var index = layer.load();
+            $.ajax({
+                url: hidRootUrl + "/Activity/Activity/ActivityDetailInfo/",
+                type: "Get",
+                data: dataArry,
+                success: function(data) {
+                    selectProduct.html(data);
+                }
+            });
+            layer.close(index);
+        }
+        //分页查询功能
+        function Search(pageIndex) {
+            $("#currentPageIndex").val(pageIndex);
+            LoadingActivityResultDetailDate();
+        }
+    </script>
+    <!--页面脚本位置E-->
+
+</body>
+
+</html>

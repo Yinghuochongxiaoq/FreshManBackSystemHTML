@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面样式表 -->
+    <meta charset="utf-8" />
+    <title>WelCome</title>
+    <meta name="description" content="Dashboard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+
+
+    <!--Basic Styles-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/css/weather-icons.min.css" rel="stylesheet" />
+
+    <!--Fonts-->
+    <link href="../assets/css/usesocom-fonts.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://c.csdnimg.cn/public/common/toolbar/css/index.css">
+    <link rel="stylesheet" href="http://c.csdnimg.cn/cdn/201502/css/font-awesome.min.css">
+    <link href="../Content/Styles/Home/geek.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://geek.csdn.net/assets/css/comments.css" />
+    <title>WelCome</title>
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../assets/css/beyond.min.css?v=2016072501" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/demo.min.css" rel="stylesheet" />
+    <link href="../assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="../assets/css/animate.min.css" rel="stylesheet" />
+    <!--页面样式-->
+    <link href="../assets/css/pageStyle.css" rel="stylesheet" />
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="../assets/js/skins.min.js"></script>
+</head>
+
+<body>
+    <!-- 页面内容块 -->
+    <input type="hidden" id="hidRootNode" value=".." />
+    <!-- Loading Container -->
+    <div class="loading-container">
+        <div class="loading-progress">
+            <div class="rotator">
+                <div class="rotator">
+                    <div class="rotator colored">
+                        <div class="rotator">
+                            <div class="rotator colored">
+                                <div class="rotator colored"></div>
+                                <div class="rotator"></div>
+                            </div>
+                            <div class="rotator colored"></div>
+                        </div>
+                        <div class="rotator"></div>
+                    </div>
+                    <div class="rotator"></div>
+                </div>
+                <div class="rotator"></div>
+            </div>
+            <div class="rotator"></div>
+        </div>
+    </div>
+    <!--  /Loading Container -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="navbar-container">
+                <!-- Navbar Barnd -->
+                <div class="navbar-header pull-left">
+                    <a href="../Home/Home/WelCome" class="navbar-brand">
+                        <div>
+
+
+                            系统名称
+                        </div>
+                    </a>
+                </div>
+                <!-- /Navbar Barnd -->
+                <!-- Sidebar Collapse -->
+                <div class="sidebar-collapse" id="sidebar-collapse">
+                    <i class="collapse-icon fa fa-bars"></i>
+                </div>
+                <!-- /Sidebar Collapse -->
+                <!-- Account Area and Settings -->
+                <div class="navbar-header pull-right">
+                    <div class="navbar-account">
+                        <ul class="account-area">
+                            <li>
+                                <a class=" dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
+                                    <i class="icon fa fa-warning"></i>
+                                </a>
+                                <!--Notification Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-notifications">
+                                    <li class="dropdown-footer ">
+                                        <span>
+                                        ^v^没有任何警告哦
+                                    </span>
+                                    </li>
+                                </ul>
+                                <!--/Notification Dropdown-->
+                            </li>
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown" title="Tasks" href="#">
+                                    <i class="icon fa fa-tasks"></i>
+                                    <span class="badge"></span>
+                                </a>
+                                <!--Tasks Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-tasks dropdown-arrow taskdrawpdown">
+                                    <li class="dropdown-header bordered-darkorange">
+                                        <i class="fa fa-tasks"></i> Tasks In Progress
+                                    </li>
+                                </ul>
+                                <!--/Tasks Dropdown-->
+                            </li>
+                            <li>
+                                <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                                    <div class="avatar" title="View your public profile">
+                                        <img src="../content/images/myself.png">
+                                    </div>
+                                    <section>
+                                        <h2><span class="profile"><span>用户名称</span></span>
+                                        </h2>
+                                    </section>
+                                </a>
+                                <!--Login Area Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                    <li class="username"><a>用户名称</a></li>
+                                    <li class="email"><a>详细信息</a></li>
+                                    <!--Avatar Area-->
+                                    <li>
+                                        <div class="avatar-area">
+                                            <img src="../content/images/myself.png" class="avatar">
+                                            <span class="caption">修改头像</span>
+                                        </div>
+                                    </li>
+                                    <!--Theme Selector Area-->
+                                    <li class="theme-area">
+                                        <ul class="colorpicker" id="skin-changer">
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#5DB2FF;" rel="../assets/css/skins/blue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#2dc3e8;" rel="../assets/css/skins/azure.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#03B3B2;" rel="../assets/css/skins/teal.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#53a93f;" rel="../assets/css/skins/green.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#FF8F32;" rel="../assets/css/skins/orange.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#cc324b;" rel="../assets/css/skins/pink.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#AC193D;" rel="../assets/css/skins/darkred.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#8C0095;" rel="../assets/css/skins/purple.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#0072C6;" rel="../assets/css/skins/darkblue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#585858;" rel="../assets/css/skins/gray.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#474544;" rel="../assets/css/skins/black.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#001940;" rel="../assets/css/skins/deepblue.min.css"></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!--/Theme Selector Area-->
+                                    <li class="dropdown-footer">
+                                        <a href="../Account/Auth/Logout">
+                                        退出登录
+                                    </a>
+                                    </li>
+                                </ul>
+                                <!--/Login Area Dropdown-->
+                            </li>
+                            <!-- /Account Area -->
+                            <!--Note: notice that setting div must start right after account area list.
+                        no space must be between these elements-->
+                            <!-- Settings -->
+                        </ul>
+                        <div class="setting">
+                            <a id="btn-setting" title="Setting" href="#">
+                                <i class="icon glyphicon glyphicon-cog"></i>
+                            </a>
+                        </div>
+                        <div class="setting-container">
+                            <label>
+                            <input type="checkbox" id="checkbox_fixednavbar">
+                            <span class="text">固定头部</span>
+                        </label>
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedsidebar">
+                            <span class="text">固定菜单栏</span>
+                        </label>
+
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedheader">
+                            <span class="text">固定内容头部</span>
+                        </label>
+                        </div>
+                        <!-- Settings -->
+                    </div>
+                </div>
+                <!-- /Account Area and Settings -->
+            </div>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input type="text" class="searchinput" />
+                    <i class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+
+                <ul class="nav sidebar-menu">
+                    <li class="open">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-file"></i>
+                            <span class="menu-text">缓存管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/Redis" title="Redis缓存">
+                                    <span class="menu-text">Redis缓存</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/LeonidClear" title="狮子座缓存">
+                                    <span class="menu-text">狮子座缓存</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/csearchlight/Cache/Cache/DealNewRedis" title="NewRedis缓存">
+                                    <span class="menu-text">NewRedis缓存</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-exclamation-sign"></i>
+                            <span class="menu-text">订单管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Order/Order/OrderList/" title="订单列表">
+                                    <span class="menu-text">订单列表</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Order/Order/OrderDetail" title="订单详情">
+                                    <span class="menu-text">订单详情</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Order/Order/OrderDianPing" title="订单点评">
+                                    <span class="menu-text">订单点评</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Order/Order/MemberShipInfo" title="查询会员信息">
+                                    <span class="menu-text">查询会员信息</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-send"></i>
+                            <span class="menu-text">活动管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Activity/Activity/ActivityResult/" title="活动抽奖结果信息">
+                                    <span class="menu-text">活动抽奖结果信息</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-paperclip"></i>
+                            <span class="menu-text">工具管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/SecretTool/" title="加解密工具">
+                                    <span class="menu-text">加解密工具</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/JsonFormat/" title="Json格式化">
+                                    <span class="menu-text">Json格式化</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/QtImageDeal/" title="二维码解析">
+                                    <span class="menu-text">二维码解析</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/GetCityInfoByIp" title="IP定位城市">
+                                    <span class="menu-text">IP定位城市</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Tools/Tools/UsuallyLinkAddress/" title="常用地址">
+                                    <span class="menu-text">常用地址</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-globe"></i>
+                            <span class="menu-text">前端管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/MaterialLibrary/index.html" title="前端一期特效">
+                                    <span class="menu-text">前端一期特效</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/SecedeSpecialEfficiency/index.html" title="前端二期特效">
+                                    <span class="menu-text">前端二期特效</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-folder-open"></i>
+                            <span class="menu-text">文档管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/FileManage/FileManage/FileManageIndex" title="文档管理集合页">
+                                    <span class="menu-text">文档管理集合页</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/FileManage/FileManage/FileUpload" title="上传资源文件">
+                                    <span class="menu-text">上传资源文件</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-home"></i>
+                            <span class="menu-text">营销组之家</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/FrontFamily/FrontFamily/FrontFamilyIndex/" title="我们的团队">
+                                    <span class="menu-text">我们的团队</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/FrontFamily/FrontFamily/FrontSayYouWant/" title="心愿树">
+                                    <span class="menu-text">心愿树</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-stats"></i>
+                            <span class="menu-text">用户轨迹查询</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/SpecialStatistic/SpecialStatistic/SpecialStatisticIndex/" title="轨迹简单查询">
+                                    <span class="menu-text">轨迹简单查询</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/SpecialStatistic/SpecialStatistic/OrderFinalInfoIndex/" title="入口订单量查询">
+                                    <span class="menu-text">入口订单量查询</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/SpecialStatistic/SpecialStatistic/TimeSliceSpecial/" title="专题访问时段">
+                                    <span class="menu-text">专题访问时段</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-share"></i>
+                            <span class="menu-text">晨会知识分享</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingShareInfoList" title="晨会分享列表">
+                                    <span class="menu-text">晨会分享列表</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingShareAddInfo" title="添加分享记录">
+                                    <span class="menu-text">添加分享记录</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingShareComment" title="分享点评">
+                                    <span class="menu-text">分享点评</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingSharePersonList" title="个人分享列表">
+                                    <span class="menu-text">个人分享列表</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/MoreingShare/MoreingShare/MoreingShareConfig" title="分享考核配置页">
+                                    <span class="menu-text">分享考核配置页</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <i class="menu-icon glyphicon  glyphicon-home"></i>
+                        <h1>
+                            这是是定位
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+
+                    <div class="widget widget-body">
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137015">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137015" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137015" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://blog.sina.com.cn/s/blog_4caedc7a0102wrqg.html" class="title" target="_blank">微软亚洲研究院开源图数据查询语言LIKQ</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="blog.sina.com.cn"></i><a href="http://blog.sina.com.cn/s/blog_4caedc7a0102wrqg.html" target="_blank">blog.sina.com.cn</a></li>
+                                    <li>1小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/1" data-target>GEEKNEWS</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>352</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/u014648882" target="_blank">
+                    <img src="http://avatar.csdn.net/1/7/B/2_u014648882.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137014">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137014" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137014" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://blog.csdn.net/qq_35101189/article/details/54962866" class="title" target="_blank">Java 反射机制详解</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="blog.csdn.net"></i><a href="http://blog.csdn.net/qq_35101189/article/details/54962866" target="_blank">blog.csdn.net</a></li>
+                                    <li>1小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/93" data-target>Java</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>333</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/qq_36428332" target="_blank">
+                    <img src="http://avatar.csdn.net/E/F/F/2_qq_36428332.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137002">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">2</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137002" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137002" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://blog.csdn.net/qq_35246620/article/details/54957511" class="title" target="_blank">IntelliJ IDEA 控制台输出中文乱码问题的解决方法</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="blog.csdn.net"></i><a href="http://blog.csdn.net/qq_35246620/article/details/54957511" target="_blank">blog.csdn.net</a></li>
+                                    <li>2小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/50" data-target>潜水猿</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>367</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/qq_35246620" target="_blank">
+                    <img src="http://avatar.csdn.net/2/5/F/2_qq_35246620.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137016">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137016" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137016" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://blog.csdn.net/TyroneRenekton/article/details/54962841" class="title" target="_blank">第一行安卓代码——活动的生命周期2.4</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="blog.csdn.net"></i><a href="http://blog.csdn.net/TyroneRenekton/article/details/54962841" target="_blank">blog.csdn.net</a></li>
+                                    <li>1小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/132" data-target>移动开发</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>323</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/tyronerenekton" target="_blank">
+                    <img src="http://avatar.csdn.net/0/E/5/2_tyronerenekton.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137017">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137017" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137017" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://blog.csdn.net/mafuli007/article/details/7963879" class="title" target="_blank">linux后台运行服务</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="blog.csdn.net"></i><a href="http://blog.csdn.net/mafuli007/article/details/7963879" target="_blank">blog.csdn.net</a></li>
+                                    <li>1小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/95" data-target>Linux/UNIX</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>312</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/qq_25827845" target="_blank">
+                    <img src="http://avatar.csdn.net/F/B/5/2_qq_25827845.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136999">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">1</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136999" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136999" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="https://www.kubernetes.org.cn/1382.html" class="title" target="_blank">IBM基于Kubernetes的容器云全解析</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="kubernetes.org.cn"></i><a href="https://www.kubernetes.org.cn/1382.html" target="_blank">kubernetes.org.cn</a></li>
+                                    <li>2小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/53" data-target>Container</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>434</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/karamos" target="_blank">
+                    <img src="http://avatar.csdn.net/4/0/1/2_karamos.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136998">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">1</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136998" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136998" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://geek.csdn.net/news/detail/136998" class="title" target="_blank">基于分布式存储的Windows ODX实现与优化</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-file-text-o"></i></li>
+                                    <li>2小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/49" data-target>云计算</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>421</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/karamos" target="_blank">
+                    <img src="http://avatar.csdn.net/4/0/1/2_karamos.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137030">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137030" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137030" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://mp.weixin.qq.com/s?__biz=MzI0ODcxODk5OA==&amp;mid=2247484039&amp;idx=1&amp;sn=8cb8b7f887f3156a0250ec30a4e8ea89&amp;chksm=e99d317edeeab86877b43f9c41629c553b4b39bd0bc8f6f4b758077f4cc480ab1e02754131aa&amp;mpshare=1&amp;scene=1&amp;srcid=0210DVLQpFZprCRFw9uuUr3n#rd" class="title" target="_blank">针对NLP模型的RNN/CNN对比</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="mp.weixin.qq.com"></i><a href="http://mp.weixin.qq.com/s?__biz=MzI0ODcxODk5OA==&amp;mid=2247484039&amp;idx=1&amp;sn=8cb8b7f887f3156a0250ec30a4e8ea89&amp;chksm=e99d317edeeab86877b43f9c41629c553b4b39bd0bc8f6f4b758077f4cc480ab1e02754131aa&amp;mpshare=1&amp;scene=1&amp;srcid=0210DVLQpFZprCRFw9uuUr3n#rd"
+                                            target="_blank">mp.weixin.qq.com</a></li>
+                                    <li>53分钟前</li>
+                                    <li><a href="http://geek.csdn.net/forum/43" data-target>人工智能</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>315</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/qunnie_yi" target="_blank">
+                    <img src="http://avatar.csdn.net/4/0/E/2_qunnie_yi.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136997">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136997" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136997" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://www.leiphone.com/news/201702/OgYAOyBEEMN1PQC2.html?utm_source=tuicool&amp;utm_medium=referral" class="title" target="_blank">五个鲜为人知，但又不可不知的机器学习开源项目</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="leiphone.com"></i><a href="http://www.leiphone.com/news/201702/OgYAOyBEEMN1PQC2.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank">leiphone.com</a></li>
+                                    <li>2小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/1" data-target>GEEKNEWS</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>446</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/imgxr" target="_blank">
+                    <img src="http://avatar.csdn.net/4/E/B/2_imgxr.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137024">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">1</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137024" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137024" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="https://plus.google.com/+JeffDean/posts/PzMm8rAiX4k" class="title" target="_blank">Google大脑团队 ICLR 2017 的20篇论文</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="plus.google.com"></i><a href="https://plus.google.com/+JeffDean/posts/PzMm8rAiX4k" target="_blank">plus.google.com</a></li>
+                                    <li>1小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/43" data-target>人工智能</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>121</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/qunnie_yi" target="_blank">
+                    <img src="http://avatar.csdn.net/4/0/E/2_qunnie_yi.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136992">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">2</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136992" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136992" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTQxMTM4OQ==&amp;mid=2247484548&amp;idx=1&amp;sn=651fc0d6c6b7e57e3fea5836a82addff&amp;chksm=eae1f1d6dd9678c0a94b02c8047366485906b0da5687c34421e6e1d92216fd5ddc50d09f6d8e#rd" class="title" target="_blank">音视频开发中常见基础问题总结</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="mp.weixin.qq.com"></i><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTQxMTM4OQ==&amp;mid=2247484548&amp;idx=1&amp;sn=651fc0d6c6b7e57e3fea5836a82addff&amp;chksm=eae1f1d6dd9678c0a94b02c8047366485906b0da5687c34421e6e1d92216fd5ddc50d09f6d8e#rd"
+                                            target="_blank">mp.weixin.qq.com</a></li>
+                                    <li>2小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/65" data-target>Android开发者</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>343</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/hejjunlin" target="_blank">
+                    <img src="http://avatar.csdn.net/9/5/0/2_hejjunlin.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136996">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136996" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136996" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://dbaplus.cn/news-21-983-1.html?utm_source=tuicool&amp;utm_medium=referral" class="title" target="_blank">IBM基于Kubernetes的容器云全解析</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="dbaplus.cn"></i><a href="http://dbaplus.cn/news-21-983-1.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank">dbaplus.cn</a></li>
+                                    <li>2小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/1" data-target>GEEKNEWS</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>348</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/imgxr" target="_blank">
+                    <img src="http://avatar.csdn.net/4/E/B/2_imgxr.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137043">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137043" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137043" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://www.vaikan.com/your-code-is-my-hell/?1486694770504" class="title" target="_blank">你的代码是我的地狱</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="vaikan.com"></i><a href="http://www.vaikan.com/your-code-is-my-hell/?1486694770504" target="_blank">vaikan.com</a></li>
+                                    <li>26分钟前</li>
+                                    <li><a href="http://geek.csdn.net/forum/87" data-target>程序人生</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>120</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/hometown_" target="_blank">
+                    <img src="http://avatar.csdn.net/0/0/2/2_hometown_.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137038">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137038" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137038" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="https://zhuanlan.zhihu.com/p/25171113" class="title" target="_blank">面向UI编程：ui.js 1.0 粗糙版本发布，分布式开发+容器化+组件化+配置化框架，从无到有的艰难创造</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="zhuanlan.zhihu.com"></i><a href="https://zhuanlan.zhihu.com/p/25171113" target="_blank">zhuanlan.zhihu.com</a></li>
+                                    <li>38分钟前</li>
+                                    <li><a href="http://geek.csdn.net/forum/47" data-target>前端</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>91</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/zhong123893" target="_blank">
+                    <img src="http://avatar.csdn.net/7/F/5/2_zhong123893.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136993">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136993" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136993" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://www.datalearner.com/blog/1051483882758788" class="title" target="_blank">LDA的Gibbs抽样详细推理与理解</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="datalearner.com"></i><a href="http://www.datalearner.com/blog/1051483882758788" target="_blank">datalearner.com</a></li>
+                                    <li>2小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/127" data-target>算法</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>312</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/df19900725" target="_blank">
+                    <img src="http://avatar.csdn.net/5/F/9/2_df19900725.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136979">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">6</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136979" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136979" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://mp.weixin.qq.com/s/pI9S-qLpooYavrvC96YbdA" class="title" target="_blank">2016 腾讯软件开发面试题（不定项选择题），我仿佛回到大学时代，好多都不会</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="mp.weixin.qq.com"></i><a href="http://mp.weixin.qq.com/s/pI9S-qLpooYavrvC96YbdA" target="_blank">mp.weixin.qq.com</a></li>
+                                    <li>13小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/87" data-target>程序人生</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>3358</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/tangmanong" target="_blank">
+                    <img src="http://avatar.csdn.net/2/0/3/2_tangmanong.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137040">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137040" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137040" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://tech.qq.com/a/20170210/003506.htm?qqcom_pgv_from=aio" class="title" target="_blank">中国医疗需要怎样的AI？</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="tech.qq.com"></i><a href="http://tech.qq.com/a/20170210/003506.htm?qqcom_pgv_from=aio" target="_blank">tech.qq.com</a></li>
+                                    <li>34分钟前</li>
+                                    <li><a href="http://geek.csdn.net/forum/43" data-target>人工智能</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>78</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/yssycz" target="_blank">
+                    <img src="http://avatar.csdn.net/5/8/2/2_yssycz.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136973">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">3</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136973" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136973" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://geek.csdn.net/news/detail/136973" class="title" target="_blank">使用SIMD技术提高C++程序性能</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-file-text-o"></i></li>
+                                    <li>13小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/1" data-target>GEEKNEWS</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>3772</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/u012396362" target="_blank">
+                    <img src="http://avatar.csdn.net/F/8/B/2_u012396362.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="136951">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">10</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136951" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/136951" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="http://geek.csdn.net/news/detail/136951" class="title" target="_blank">【AI每日播报】Google发布目前最大视频数据集</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-file-text-o"></i></li>
+                                    <li>16小时前</li>
+                                    <li><a href="http://geek.csdn.net/forum/43" data-target>人工智能</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>4043</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/qunnie_yi" target="_blank">
+                    <img src="http://avatar.csdn.net/4/0/E/2_qunnie_yi.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+                        <dl class="geek_list" id="">
+                            <dt class="left">
+                <div class="news_vote" voteid="137033">
+                    <i class="fa fa-sort-up" datatype="up"></i>
+                    <div class="count">0</div>
+                    <i class="fa fa-sort-down" datatype="down"></i>
+                </div>
+            </dt>
+                            <dd>
+                                <div class="list_ad">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a data-pjax class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137033" title="点击查看详情"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <div class="list_ad_mobile">
+                                    <span class="tracking-ad" data-mod="popu_81">
+                        <a class="link_pjax" tabindex="0" href="http://geek.csdn.net/news/detail/137033" title="点击查看详情" target="_blank"><!--<span>推广</span>--></a>
+                                    <!--<a href="#" id="generalize"></a>-->
+                                    </span>
+                                </div>
+                                <span class="tracking-ad" data-mod="popu_81">
+                            <a href="https://zhuanlan.zhihu.com/p/25166666?refer=dreawer" class="title" target="_blank">Effective前端6：避免页面卡顿</a>
+                        </span>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-link" title="zhuanlan.zhihu.com"></i><a href="https://zhuanlan.zhihu.com/p/25166666?refer=dreawer" target="_blank">zhuanlan.zhihu.com</a></li>
+                                    <li>40分钟前</li>
+                                    <li><a href="http://geek.csdn.net/forum/47" data-target>前端</a></li>
+                                    <li class="read_num"><span>阅读数</span><em>72</em></li>
+                                </ul>
+                            </dd>
+
+                            <dt class="right">
+                                                    <!--<span class="tracking-ad" data-mod="popu_81">
+                <a href="" target="_blank">
+                    <i class="fa fa-comment"></i>
+                    <span class="count"></span>
+                </a>
+                </span>-->
+                <a href="http://geek.csdn.net/user/publishlist/whxiaobu" target="_blank">
+                    <img src="http://avatar.csdn.net/8/6/A/2_whxiaobu.jpg" class="avatar">
+                </a>
+            </dt>
+                        </dl>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+        <!-- /Page Container -->
+        <!-- Main Container -->
+
+    </div>
+    <!--Basic Scripts-->
+    <script src="../assets/js/jquery-2.0.3.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!--Beyond Scripts-->
+    <script src="../assets/js/beyond.min.js"></script>
+
+</body>
+
+</html>

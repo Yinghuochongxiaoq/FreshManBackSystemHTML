@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面样式表 -->
+    <meta charset="utf-8" />
+    <title>UEditor</title>
+    <meta name="description" content="Dashboard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <!--Basic Styles-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/css/weather-icons.min.css" rel="stylesheet" />
+    <!--Fonts-->
+    <link href="../assets/css/usesocom-fonts.css" rel="stylesheet" type="text/css">
+    <link href="../Content/Styles/PagerStyle.css" rel="stylesheet" />
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../assets/css/beyond.min.css?v=2016072501" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/demo.min.css" rel="stylesheet" />
+    <link href="../assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="../assets/css/animate.min.css" rel="stylesheet" />
+    <!--页面样式S-->
+    <link href="../Content/Styles/Uploadbase.css" rel="stylesheet" />
+    <!--页面样式E-->
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="../assets/js/skins.min.js"></script>
+</head>
+
+<body>
+    <!-- 页面内容块 -->
+    <input type="hidden" id="hidRootNode" value="../" />
+    <!--Loading Container -->
+    <div class="loading-container">
+        <div class="loading-progress">
+            <div class="rotator">
+                <div class="rotator">
+                    <div class="rotator colored">
+                        <div class="rotator">
+                            <div class="rotator colored">
+                                <div class="rotator colored"></div>
+                                <div class="rotator"></div>
+                            </div>
+                            <div class="rotator colored"></div>
+                        </div>
+                        <div class="rotator"></div>
+                    </div>
+                    <div class="rotator"></div>
+                </div>
+                <div class="rotator"></div>
+            </div>
+            <div class="rotator"></div>
+        </div>
+    </div>
+    <!--/Loading Container -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="navbar-container">
+                <!-- Navbar Barnd -->
+                <div class="navbar-header pull-left">
+                    <a href="../Home/Home/WelCome" class="navbar-brand">
+                        <div>
+                            系统名称
+                        </div>
+                    </a>
+                </div>
+                <!-- /Navbar Barnd -->
+                <!-- Sidebar Collapse -->
+                <div class="sidebar-collapse" id="sidebar-collapse">
+                    <i class="collapse-icon fa fa-bars"></i>
+                </div>
+                <!-- /Sidebar Collapse -->
+                <!-- Account Area and Settings -->
+                <div class="navbar-header pull-right">
+                    <div class="navbar-account">
+                        <ul class="account-area">
+                            <li>
+                                <a class=" dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
+                                    <i class="icon fa fa-warning"></i>
+                                </a>
+                                <!--Notification Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-notifications">
+                                    <li class="dropdown-footer ">
+                                        <span>
+                                        ^v^没有任何警告哦
+                                    </span>
+                                    </li>
+                                </ul>
+                                <!--/Notification Dropdown-->
+                            </li>
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown" title="Tasks" href="#">
+                                    <i class="icon fa fa-tasks"></i>
+                                    <span class="badge"></span>
+                                </a>
+                                <!--Tasks Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-tasks dropdown-arrow taskdrawpdown">
+                                    <li class="dropdown-header bordered-darkorange">
+                                        <i class="fa fa-tasks"></i> Tasks In Progress
+                                    </li>
+                                </ul>
+                                <!--/Tasks Dropdown-->
+                            </li>
+                            <li>
+                                <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                                    <div class="avatar" title="View your public profile">
+                                        <img src="../content/images/myself.png">
+                                    </div>
+                                    <section>
+                                        <h2><span class="profile"><span>用户名称</span></span>
+                                        </h2>
+                                    </section>
+                                </a>
+                                <!--Login Area Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                    <li class="username"><a>用户名称</a></li>
+                                    <li class="email"><a>详细信息</a></li>
+                                    <!--Avatar Area-->
+                                    <li>
+                                        <div class="avatar-area">
+                                            <img src="../content/images/myself.png" class="avatar">
+                                            <span class="caption">修改头像</span>
+                                        </div>
+                                    </li>
+                                    <!--Theme Selector Area-->
+                                    <li class="theme-area">
+                                        <ul class="colorpicker" id="skin-changer">
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#5DB2FF;" rel="../assets/css/skins/blue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#2dc3e8;" rel="../assets/css/skins/azure.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#03B3B2;" rel="../assets/css/skins/teal.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#53a93f;" rel="../assets/css/skins/green.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#FF8F32;" rel="../assets/css/skins/orange.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#cc324b;" rel="../assets/css/skins/pink.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#AC193D;" rel="../assets/css/skins/darkred.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#8C0095;" rel="../assets/css/skins/purple.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#0072C6;" rel="../assets/css/skins/darkblue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#585858;" rel="../assets/css/skins/gray.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#474544;" rel="../assets/css/skins/black.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#001940;" rel="../assets/css/skins/deepblue.min.css"></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!--/Theme Selector Area-->
+                                    <li class="dropdown-footer">
+                                        <a href="../Account/Auth/Logout">
+                                        退出登录
+                                    </a>
+                                    </li>
+                                </ul>
+                                <!--/Login Area Dropdown-->
+                            </li>
+                            <!-- /Account Area -->
+                            <!--Note: notice that setting div must start right after account area list.
+                        no space must be between these elements-->
+                            <!-- Settings -->
+                        </ul>
+                        <div class="setting">
+                            <a id="btn-setting" title="Setting" href="#">
+                                <i class="icon glyphicon glyphicon-cog"></i>
+                            </a>
+                        </div>
+                        <div class="setting-container">
+                            <label>
+                            <input type="checkbox" id="checkbox_fixednavbar">
+                            <span class="text">固定头部</span>
+                        </label>
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedsidebar">
+                            <span class="text">固定菜单栏</span>
+                        </label>
+
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedheader">
+                            <span class="text">固定内容头部</span>
+                        </label>
+                        </div>
+                        <!-- Settings -->
+                    </div>
+                </div>
+                <!-- /Account Area and Settings -->
+            </div>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input type="text" class="searchinput" />
+                    <i class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+
+                <ul class="nav sidebar-menu">
+                    <li class="open">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-file"></i>
+                            <span class="menu-text">缓存管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/Redis" title="Redis缓存">
+                                    <span class="menu-text">Redis缓存</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/LeonidClear" title="狮子座缓存">
+                                    <span class="menu-text">狮子座缓存</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/csearchlight/Cache/Cache/DealNewRedis" title="NewRedis缓存">
+                                    <span class="menu-text">NewRedis缓存</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <i class="menu-icon glyphicon  glyphicon-home"></i>
+                        <h1>
+                            这是是定位
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <div class="widget widget-body">
+                        <input type="hidden" id="hidId" value="11" />
+                        <input type="hidden" id="hidFlag" value="1" />
+                        <input type="hidden" id="hidContent" value="" />
+                        <div id="upload_demo">
+                            <div class="redbacktitle">大人，你就写写分享的内容呗，又不会少块肉哦</div>
+                            <div>
+                                <p class="form-inline">
+                                    *分享主题：
+                                    <input id="shareTheme" type="text" name="shareTheme" placeholder="输入分享主题" style="min-width: 150px; width: 80%;" class="form-control input-sm" value="@Model.TSTTitle" />
+                                </p>
+                                <p class="form-inline">
+                                    *分享时间：
+                                    <input type="text" onfocus="WdatePicker({ dateFmt: 'yyyy-MM-dd', maxDate: '%y-%M-%d' })" id="shearTime" class="form-control input-sm" style="min-width: 165px; width: 50%;" name="shearTime" value="" placeholder="输入分享时间">
+                                    <label>
+                    <input id="shareIsValide" type="checkbox" name="shareIsValide" value="0" />
+                    <span class="text"></span>
+                </label>
+                                </p>
+                                <p class="form-inline">
+                                    &nbsp;&nbsp;资料地址：
+                                    <input id="shareFileUrl" type="text" name="shareFileUrl" placeholder="输入资料地址" style="min-width: 150px; width: 80%;" class="form-control input-sm" value="@Model.TSTUrl" />
+                                </p>
+                                <p>
+                                    *分享内容：
+                                    <script id="shareContent" name="shareContent" type="text/plain" style="width: 100%; height: 300px;">
+                                    </script>
+                                </p>
+                                <p class="form-inline">
+                                    我要拉票：
+                                    <input id="shareRemark" type="text" name="shareRemark" placeholder="输入拉票宣言" style="min-width: 150px; width: 80%;" class="form-control input-sm" value="@Model.TSTDeclaration" />
+                                </p>
+                                <input class="btn btn-success btn-sm ml-20 mt-20 mb-20" type="button" onclick=" AddShareInfo(); " value="提交晨会分享记录" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+        <!-- /Page Container -->
+        <!-- Main Container -->
+
+    </div>
+    <!--Basic Scripts-->
+    <script src="../assets/js/jquery-2.0.3.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!--Beyond Scripts-->
+    <script src="../assets/js/beyond.min.js"></script>
+    <!--页面脚本位置S-->
+    <script src="../Content/Scripts/Common.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../Content/Scripts/My97DatePicker/WdatePicker.js"></script>
+    <!--UEditor编辑器-->
+    <script type="text/javascript" charset="utf-8" src="../UEditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../UEditor/ueditor.all.min.js">
+    </script>
+    <script>
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('shareContent');
+        /**
+        初始化页面
+        */
+        $(document).ready(function() {
+            var flag = $("#hidFlag").val();
+            if (flag == 1) {
+                $("#shareIsValide").attr("checked", 'true');
+                $("#shareIsValide").val(1);
+            }
+            var content = $("#hidContent").val();
+            if (content != null && content != "undefined") {
+                UE.getEditor('shareContent').addListener("ready", function() {
+                    UE.getEditor('shareContent').setContent(content);
+                });
+            }
+        });
+
+        $("input[name=shareIsValide]").click(function() {
+            if ($(this).attr("checked") == true) {
+                $(this).val(1);
+            } else {
+                $(this).val(0);
+            }
+        });
+    </script>
+    <!--页面脚本位置E-->
+
+</body>
+
+</html>

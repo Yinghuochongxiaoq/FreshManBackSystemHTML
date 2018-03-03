@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面样式表 -->
+    <meta charset="utf-8" />
+    <title>ListPage</title>
+    <meta name="description" content="Dashboard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <!--Basic Styles-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/css/weather-icons.min.css" rel="stylesheet" />
+    <!--Fonts-->
+    <link href="../assets/css/usesocom-fonts.css" rel="stylesheet" type="text/css">
+    <link href="../Content/Styles/PagerStyle.css" rel="stylesheet" />
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../assets/css/beyond.min.css?v=2016072501" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/demo.min.css" rel="stylesheet" />
+    <link href="../assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="../assets/css/animate.min.css" rel="stylesheet" />
+    <!--页面样式S-->
+    <!--页面样式E-->
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="../assets/js/skins.min.js"></script>
+</head>
+
+<body>
+    <!-- 页面内容块 -->
+    <input type="hidden" id="hidRootNode" value="../" />
+    <!--Loading Container -->
+    <div class="loading-container">
+        <div class="loading-progress">
+            <div class="rotator">
+                <div class="rotator">
+                    <div class="rotator colored">
+                        <div class="rotator">
+                            <div class="rotator colored">
+                                <div class="rotator colored"></div>
+                                <div class="rotator"></div>
+                            </div>
+                            <div class="rotator colored"></div>
+                        </div>
+                        <div class="rotator"></div>
+                    </div>
+                    <div class="rotator"></div>
+                </div>
+                <div class="rotator"></div>
+            </div>
+            <div class="rotator"></div>
+        </div>
+    </div>
+    <!--/Loading Container -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="navbar-container">
+                <!-- Navbar Barnd -->
+                <div class="navbar-header pull-left">
+                    <a href="../Home/Home/WelCome" class="navbar-brand">
+                        <div>
+                            系统名称
+                        </div>
+                    </a>
+                </div>
+                <!-- /Navbar Barnd -->
+                <!-- Sidebar Collapse -->
+                <div class="sidebar-collapse" id="sidebar-collapse">
+                    <i class="collapse-icon fa fa-bars"></i>
+                </div>
+                <!-- /Sidebar Collapse -->
+                <!-- Account Area and Settings -->
+                <div class="navbar-header pull-right">
+                    <div class="navbar-account">
+                        <ul class="account-area">
+                            <li>
+                                <a class=" dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
+                                    <i class="icon fa fa-warning"></i>
+                                </a>
+                                <!--Notification Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-notifications">
+                                    <li class="dropdown-footer ">
+                                        <span>
+                                        ^v^没有任何警告哦
+                                    </span>
+                                    </li>
+                                </ul>
+                                <!--/Notification Dropdown-->
+                            </li>
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown" title="Tasks" href="#">
+                                    <i class="icon fa fa-tasks"></i>
+                                    <span class="badge"></span>
+                                </a>
+                                <!--Tasks Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-tasks dropdown-arrow taskdrawpdown">
+                                    <li class="dropdown-header bordered-darkorange">
+                                        <i class="fa fa-tasks"></i> Tasks In Progress
+                                    </li>
+                                </ul>
+                                <!--/Tasks Dropdown-->
+                            </li>
+                            <li>
+                                <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                                    <div class="avatar" title="View your public profile">
+                                        <img src="../content/images/myself.png">
+                                    </div>
+                                    <section>
+                                        <h2><span class="profile"><span>用户名称</span></span>
+                                        </h2>
+                                    </section>
+                                </a>
+                                <!--Login Area Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                    <li class="username"><a>用户名称</a></li>
+                                    <li class="email"><a>详细信息</a></li>
+                                    <!--Avatar Area-->
+                                    <li>
+                                        <div class="avatar-area">
+                                            <img src="../content/images/myself.png" class="avatar">
+                                            <span class="caption">修改头像</span>
+                                        </div>
+                                    </li>
+                                    <!--Theme Selector Area-->
+                                    <li class="theme-area">
+                                        <ul class="colorpicker" id="skin-changer">
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#5DB2FF;" rel="../assets/css/skins/blue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#2dc3e8;" rel="../assets/css/skins/azure.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#03B3B2;" rel="../assets/css/skins/teal.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#53a93f;" rel="../assets/css/skins/green.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#FF8F32;" rel="../assets/css/skins/orange.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#cc324b;" rel="../assets/css/skins/pink.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#AC193D;" rel="../assets/css/skins/darkred.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#8C0095;" rel="../assets/css/skins/purple.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#0072C6;" rel="../assets/css/skins/darkblue.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#585858;" rel="../assets/css/skins/gray.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#474544;" rel="../assets/css/skins/black.min.css"></a>
+                                            </li>
+                                            <li>
+                                                <a class="colorpick-btn" href="#" style="background-color:#001940;" rel="../assets/css/skins/deepblue.min.css"></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!--/Theme Selector Area-->
+                                    <li class="dropdown-footer">
+                                        <a href="../Account/Auth/Logout">
+                                        退出登录
+                                    </a>
+                                    </li>
+                                </ul>
+                                <!--/Login Area Dropdown-->
+                            </li>
+                            <!-- /Account Area -->
+                            <!--Note: notice that setting div must start right after account area list.
+                        no space must be between these elements-->
+                            <!-- Settings -->
+                        </ul>
+                        <div class="setting">
+                            <a id="btn-setting" title="Setting" href="#">
+                                <i class="icon glyphicon glyphicon-cog"></i>
+                            </a>
+                        </div>
+                        <div class="setting-container">
+                            <label>
+                            <input type="checkbox" id="checkbox_fixednavbar">
+                            <span class="text">固定头部</span>
+                        </label>
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedsidebar">
+                            <span class="text">固定菜单栏</span>
+                        </label>
+
+                            <label>
+                            <input type="checkbox" id="checkbox_fixedheader">
+                            <span class="text">固定内容头部</span>
+                        </label>
+                        </div>
+                        <!-- Settings -->
+                    </div>
+                </div>
+                <!-- /Account Area and Settings -->
+            </div>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input type="text" class="searchinput" />
+                    <i class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+
+                <ul class="nav sidebar-menu">
+                    <li class="open">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon glyphicon  glyphicon-file"></i>
+                            <span class="menu-text">缓存管理</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/Redis" title="Redis缓存">
+                                    <span class="menu-text">Redis缓存</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/csearchlight/Cache/Cache/LeonidClear" title="狮子座缓存">
+                                    <span class="menu-text">狮子座缓存</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/csearchlight/Cache/Cache/DealNewRedis" title="NewRedis缓存">
+                                    <span class="menu-text">NewRedis缓存</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <i class="menu-icon glyphicon  glyphicon-home"></i>
+                        <h1>
+                            这是是定位
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <div class="widget widget-body">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                                        <div class="widget">
+                                            <div class="widget-header bordered-bottom bordered-blue">
+                                                <span class="widget-caption">AES加解密</span>
+                                            </div>
+                                            <div class="widget-body">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                <input type="text" name="AESEncryptText" id="AESEncryptText" placeholder=" 输入明文" class="form-control" title="加密密钥：Z3P54EKJGM6WS90O，加密偏移量：R8QIDACU1Y7LXTFV" />
+                                <i class="fa fa-unlock circular"></i>
+                            </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                <input type="text" name="AESDecryptText" id="AESDecryptText" placeholder=" 输入密文" class="form-control" title="加密密钥：Z3P54EKJGM6WS90O，加密偏移量：R8QIDACU1Y7LXTFV" />
+                                <i class="fa fa-lock circular"></i>
+                            </span>
+                                                </div>
+                                                <a class="btn btn-primary" id="AESEncrypt" href="javascript:AESEncrypt(128);"><i class="fa fa-lock"></i> 加密</a>
+                                                <a class="btn btn-primary" id="AESEncrypt256" href="javascript:AESEncrypt(256);"><i class="fa fa-lock"></i> 加密(128)</a>
+                                                <a class="btn btn-warning" id="AESDecrypt" href="javascript:AESDecrypt(128);"><i class="fa fa-unlock"></i> 解密</a>
+                                                <a class="btn btn-warning" id="AESDecrypt256" href="javascript:AESDecrypt(256);"><i class="fa fa-unlock"></i> 解密(128)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                                        <div class="widget">
+                                            <div class="widget-header bordered-bottom bordered-blue">
+                                                <span class="widget-caption">DES加解密</span>
+                                            </div>
+                                            <div class="widget-body">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                <input type="text" name="DESEncryptText" id="DESEncryptText" placeholder=" 输入明文" class="form-control" title="解密消息" />
+                                <i class="fa fa-unlock circular"></i>
+                            </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                <input type="text" name="DESDecryptText" id="DESDecryptText" placeholder=" 输入密文" class="form-control" title="加密消息" />
+                                <i class="fa fa-lock circular"></i>
+                            </span>
+                                                </div>
+                                                <a class="btn btn-success" id="DESEncrypt" href="javascript:DESEncrypt();"><i class="fa fa-lock"></i> 加密</a>
+                                                <a class="btn btn-magenta " id="DESDecrypt" href="javascript:DESDecrypt();"><i class="fa fa-unlock"></i> 解密</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                                        <div class="widget">
+                                            <div class="widget-header bordered-bottom bordered-blue">
+                                                <span class="widget-caption">身份证号码验证</span>
+                                            </div>
+                                            <div class="widget-body">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                <input type="text" name="IdCardNumberText" id="IdCardNumberText" placeholder=" 输入待验证身份证号" class="form-control" title="输入待验证身份证号" />
+                                <i class="fa fa-unlock circular"></i>
+                            </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                <input type="text" name="NewIdCardNumberText" id="NewIdCardNumberText" placeholder=" 生成身份证号" class="form-control" title="生成身份证号" />
+                                <i class="fa fa-lock circular"></i>
+                            </span>
+                                                </div>
+                                                <a class="btn btn-primary" id="CheckIdCardNumber" href="javascript:CheckIdCardNumber();"><i class="fa fa-lock"></i> 验证</a>
+                                                <a class="btn btn-warning " id="GetIdCardNumberRandom" href="javascript:GetIdCardNumberRandom();"><i class="fa fa-unlock"></i> 生成</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                                        <div class="widget">
+                                            <div class="widget-header bordered-bottom bordered-blue">
+                                                <span class="widget-caption">MD5加密(32)</span>
+                                            </div>
+                                            <div class="widget-body">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                <input type="text" name="MD5Text" id="MD5Text" placeholder=" 输入明文" class="form-control" title="输入明文" />
+                                <i class="fa fa-unlock circular"></i>
+                            </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                <input type="text" name="showMD5Text" id="showMD5Text" placeholder=" MD5密文" class="form-control" title="MD5密文" />
+                                <i class="fa fa-lock circular"></i>
+                            </span>
+                                                </div>
+                                                <a class="btn btn-success" id="CheckMD5Text" href="javascript:CheckMD5Text();"><i class="fa fa-lock"></i> 加密</a>
+                                                <a class="btn btn-default" href="javascript:ErrorInfo();"><i class="fa fa-unlock"></i> 解密</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+        <!-- /Page Container -->
+        <!-- Main Container -->
+
+    </div>
+    <!--Basic Scripts-->
+    <script src="../assets/js/jquery-2.0.3.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!--Beyond Scripts-->
+    <script src="../assets/js/beyond.min.js"></script>
+    <!--页面脚本位置S-->
+    <script src="../Content/Scripts/Common.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../Content/Scripts/CheckIDCardNum.js"></script>
+    <script>
+        /** * 验证身份证号码 * @returns {} */
+        function CheckIdCardNumber() {
+            var x = document.getElementById("IdCardNumberText").value;
+            var resultStr = checkIdcard(x);
+            if (resultStr === 0) {
+                layer.msg('算你丫正确了', {
+                    icon: 1,
+                    time: 2000
+                });
+            } else {
+                layer.msg(resultStr, {
+                    icon: 5,
+                    time: 2000
+                });
+            }
+        }
+    </script>
+
+    <!--页面脚本位置E-->
+
+</body>
+
+</html>
